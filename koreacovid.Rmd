@@ -65,8 +65,12 @@ Thee numerical results show that 1.4% of females have died and 3% of males died.
 
 ## Inferential results 
 
-
-
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+ Based off the fishers test, we can see that 25 females died whereas 44 males died. The p value which was p=0.0012 was very low and tells us that there is a significant different between males and females dying. The odds of a male dying are 2.3 to 1 which is drastic. 
 
 ## Conclusions
 
