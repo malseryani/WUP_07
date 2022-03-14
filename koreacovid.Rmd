@@ -74,3 +74,4 @@ fisher.test(table1)
 
 ## Conclusions
 
+In conclusion, there was a drastic difference between the males and females dying. More males were dying whereas more females were alive. More males were dying than females even though they both got covid, and there was a larger number of females than males. 
