@@ -55,6 +55,13 @@ In the first bar plot, we can guess that not many people are dying. Whereas, in 
   
 ## Numerical results
 
+```{r}
+table1 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+Thee numerical results show that 1.4% of females have died and 3% of males died. This is more than twice the amount of females that died.
 
 ## Inferential results 
 
