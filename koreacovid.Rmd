@@ -1,7 +1,7 @@
 ---
 title: "covid 19"
-author: "Dr K"
-date: "5/2/2020"
+author: "Madeleine Alseryani"
+date: "Spring 2022"
 output:
   html_document: default
   pdf_document: default
@@ -14,7 +14,10 @@ require(tidyverse)
 require(tigerstats)
 require(lubridate)
 kRdata <- read.csv(file = 'kRdata.csv')
+kRdata <- kRdata %>% mutate(across(where(is.character), as.factor))
 ```
+
+
 ### Data is from the Patient_Info dataset from South Korea 1 Jan to 1 May 
 ### This is contained in a downloadable zip file from kaggle
 
@@ -38,11 +41,14 @@ with(kRdata, table(Sex, result))
 
 ## We create two bar charts - one based on frequency and the other on percent, use ggplot commands to do this
 
-`
+```{r}
+barchartGC(~result + Sex,data=kRdata)
+barchartGC(~result + Sex,data=kRdata, type="percent")
 
+```
   
 
-
+In the first bar plot, we can guess that not many people are dying. Whereas, in the second bar plot, it looks like more males are dying than females. It looks like it is almost by twice the amount. 
 
 
 
